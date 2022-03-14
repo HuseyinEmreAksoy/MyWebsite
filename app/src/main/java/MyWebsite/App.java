@@ -28,7 +28,7 @@ public class App {
         for(int i = 0; i < arr1.size(); i++){
             count += arr1.get(i);
         }
-        if(count / arr1.size() > k)
+        if((double)(count / arr1.size()) > k)
             return true;
         return false;
     }
