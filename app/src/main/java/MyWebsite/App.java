@@ -18,18 +18,21 @@ public class App {
     public static boolean isEqualArrayListAndMeanIsBiggerElement(ArrayList<Integer> arr1, ArrayList<Integer> arr2, Double k){
         if(arr1 == null || arr2 == null)
             return false;
+        
         Collections.sort(arr1);
         Collections.sort(arr2);
-        for(int i = 0; i < arr1.size(); i++){
+        for(int i = 0; i < arr1.size(); i++)
             if(arr1.get(i) != arr2.get(i))
                 return false;
-        }
+
         int count = 0;
-        for(int i = 0; i < arr1.size(); i++){
+        for(int i = 0; i < arr1.size(); i++)
             count += arr1.get(i);
-        }
-        if((double)(count / arr1.size()) > k)
+
+        double sum = (double)(count) / arr1.size();
+        if( sum > k)
             return true;
+
         return false;
     }
  
