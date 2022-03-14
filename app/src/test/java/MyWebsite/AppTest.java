@@ -36,8 +36,8 @@ class AppTest {
     public void testNull(){
         ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1,2,3,4));
         ArrayList<Integer> b = new ArrayList<>(Arrays.asList(3,2,1,4));
-        assertTrue(App.isEqualArrayListAndMeanIsBiggerElement(a, null, 2.0));
-        assertTrue(App.isEqualArrayListAndMeanIsBiggerElement(null, b, 2.0));
+        assertFalse(App.isEqualArrayListAndMeanIsBiggerElement(a, null, 2.0));
+        assertFalse(App.isEqualArrayListAndMeanIsBiggerElement(null, b, 2.0));
     }
     public void testMeanBigger(){
         ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1,2,3,4));
@@ -47,11 +47,11 @@ class AppTest {
     public void testMeanSmaller(){
         ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1,2,3,4));
         ArrayList<Integer> b = new ArrayList<>(Arrays.asList(3,2,1,5));
-        assertTrue(App.isEqualArrayListAndMeanIsBiggerElement(a, b, 3.4));
+        assertFalse(App.isEqualArrayListAndMeanIsBiggerElement(a, b, 3.4));
     }
     public void testMeanEqual(){
         ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1,2,3,4));
         ArrayList<Integer> b = new ArrayList<>(Arrays.asList(3,2,1,5));
-        assertTrue(App.isEqualArrayListAndMeanIsBiggerElement(a, b, 2.5));
+        assertFalse(App.isEqualArrayListAndMeanIsBiggerElement(a, b, 2.5));
     }
 }
