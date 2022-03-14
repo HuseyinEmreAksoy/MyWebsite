@@ -5,6 +5,7 @@ package MyWebsite;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.function.BooleanSupplier;
 
 public class App {
     public String getGreeting() {
@@ -14,15 +15,26 @@ public class App {
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
     }
-    public static boolean isEqualArrayList(ArrayList<Integer> a, ArrayList<Integer> b){
-        if(a == null || b == null)
+    public static boolean isEqualArrayListAndMeanIsBiggerElement(ArrayList<Integer> arr1, ArrayList<Integer> arr2, Double k){
+        if(arr1 == null || arr2 == null)
             return false;
-        Collections.sort(a);
-        Collections.sort(b);
-        for(int i = 0; i < a.size(); i++){
-            if(a.get(i) != b.get(i))
+        Collections.sort(arr1);
+        Collections.sort(arr2);
+        for(int i = 0; i < arr1.size(); i++){
+            if(arr1.get(i) != arr2.get(i))
                 return false;
         }
-        return true;
+        int count = 0;
+        for(int i = 0; i < arr1.size(); i++){
+            count += arr1.get(i);
+        }
+        if(count / arr1.size() > k)
+            return true;
+        return false;
+    }
+
+    public static BooleanSupplier isEqualArrayListAndMeanIsBiggerElement(ArrayList<Integer> a, ArrayList<Integer> b,
+            int i, int j) {
+        return null;
     }
 }
