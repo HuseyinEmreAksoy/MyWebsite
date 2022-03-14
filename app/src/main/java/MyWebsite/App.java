@@ -33,8 +33,4 @@ public class App {
         return false;
     }
 
-    public static BooleanSupplier isEqualArrayListAndMeanIsBiggerElement(ArrayList<Integer> a, ArrayList<Integer> b,
-            int i, int j) {
-        return null;
-    }
 }
