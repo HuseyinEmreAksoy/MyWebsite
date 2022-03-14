@@ -3,6 +3,9 @@
  */
 package MyWebsite;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
@@ -10,5 +13,16 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+    }
+    public static boolean isEqualArrayList(ArrayList<Integer> a, ArrayList<Integer> b){
+        if(a == null || b == null)
+            return false;
+        Collections.sort(a);
+        Collections.sort(b);
+        for(int i = 0; i < a.size(); i++){
+            if(a.get(i) != b.get(i))
+                return false;
+        }
+        return true;
     }
 }

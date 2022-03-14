@@ -6,9 +6,36 @@ package MyWebsite;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+    }
+    @Test
+    public void testFound(){
+        ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1,2,3,4));
+        ArrayList<Integer> b = new ArrayList<>(Arrays.asList(3,2,1,4));
+        assertTrue(App.isEqualArrayList(a, b));
+    }
+    @Test
+    public void testNotFound(){
+        ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1,2,3,4));
+        ArrayList<Integer> b = new ArrayList<>(Arrays.asList(3,2,1,5));
+        assertFalse(App.isEqualArrayList(a, b));
+    }
+    @Test
+    public void testEmpty(){
+        ArrayList<Integer> a = new ArrayList<>();
+        ArrayList<Integer> b = new ArrayList<>(Arrays.asList(3,2,1,4));
+        assertFalse(App.isEqualArrayList(a, b));
+    }
+    @Test
+    public void testNull(){
+        ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1,2,3,4));
+        ArrayList<Integer> b = new ArrayList<>(Arrays.asList(3,2,1,4));
+        assertTrue(App.isEqualArrayList(a, null));
     }
 }
