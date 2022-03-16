@@ -95,16 +95,20 @@ public class App {
         Collections.sort(arr1);
         Collections.sort(arr2);
         for(int i = 0; i < arr1.size(); i++)
-            if(arr1.get(i) != arr2.get(i))
+            if(arr1.get(i) != arr2.get(i)){
+                System.out.println(arr1.get(i));
+                System.out.println(arr2.get(i));
                 return false;
+            }
+                
 
-        int count = 0;
+        double count = 0;
         for(int i = 0; i < arr1.size(); i++)
             count += arr1.get(i);
-        double sum = (double)(count) / arr1.size();
+        double sum = count / arr1.size();
         if( sum > k)
             return true;
-
+        System.out.println("sadaasdasdasasdfd");
         return false;
     }
  

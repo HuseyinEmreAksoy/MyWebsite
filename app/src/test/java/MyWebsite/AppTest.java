@@ -17,7 +17,7 @@ class AppTest {
     @Test
     public void testFoundSameElement(){
         ArrayList<Integer> a = new ArrayList<>(Arrays.asList(1,20,3,4,6));
-        ArrayList<Integer> b = new ArrayList<>(Arrays.asList(1,20,3,4,6));
+        ArrayList<Integer> b = new ArrayList<>(Arrays.asList(1,3,20,4,6));
         assertTrue(App.isEqualArrayListAndMeanIsBiggerElement(a, b, 0.0));
     }
     @Test
