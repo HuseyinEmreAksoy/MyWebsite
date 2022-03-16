@@ -27,6 +27,8 @@ public class App {
         org.apache.logging.log4j.Logger logger = LogManager.getLogger(App.class);
         logger.error("HATA!!");
         port(getHerokuAssignedPort());
+        logger.error("Current port number:" + port);
+
 
         get("/", (req, res) -> "Hello, World!!!");
 
@@ -95,8 +97,6 @@ public class App {
         Collections.sort(arr2);
         for(int i = 0; i < arr1.size(); i++)
             if(arr1.get(i) != arr2.get(i)){
-                System.out.println(arr1.get(i));
-                System.out.println(arr2.get(i));
                 return false;
             }
                 
@@ -107,7 +107,6 @@ public class App {
         double sum = count / arr1.size();
         if( sum > k)
             return true;
-        System.out.println("sadaasdasdasasdfd");
         return false;
     }
  
