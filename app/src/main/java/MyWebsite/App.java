@@ -26,7 +26,7 @@ public class App {
     public static void main(String[] args) {
         org.apache.logging.log4j.Logger logger = LogManager.getLogger(App.class);
         logger.error("HATA!!");
-        port(getHerokuAssignedPort());
+        int port = Integer.parseInt(System.getenv("PORT"));
         logger.error("Current port number:" + port);
 
 
