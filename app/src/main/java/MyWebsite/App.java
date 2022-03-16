@@ -25,7 +25,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        org.apache.logging.log4j.Logger logger = LogManager.getLogger();
+        org.apache.logging.log4j.Logger logger = LogManager.getLogger(App.class);
         logger.error("HATA!!");
         port(getHerokuAssignedPort());
 
