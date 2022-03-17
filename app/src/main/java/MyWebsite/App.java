@@ -28,7 +28,7 @@ public class App {
         logger.error("HATA!!");
         port(getHerokuAssignedPort());
 
-        get("/", (req, res) -> "Hello, World!!!");
+        get("/", (req, res) -> "Welcome to website");
 
         post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));
