@@ -20,7 +20,7 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App {
     public String getGreeting() {
-        return "Hello World!";
+        return "Welcome to website!";
     }
 
     public static void main(String[] args) {

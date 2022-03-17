@@ -1,4 +1,4 @@
-This project takes 2 integer number lists and compares 2 lists to check that they are the same. If they are the same check the value is bigger than the mean of the list.
+This project takes 2 integer number lists and compares 2 lists to check that they are the same. If they are the same check the value is smaller than the mean of the list.
 
 Heroku adress: https://fast-plateau-92850.herokuapp.com/compute
 
